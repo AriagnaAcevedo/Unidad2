@@ -1,0 +1,13 @@
+package Recursividad;
+public class Numeros 
+{
+    
+    public void Recursividad(int x)
+    {
+        if (x <= 10)
+        {
+            System.out.print(x+" ");
+            Recursividad(x+1);
+        }
+    }
+}
