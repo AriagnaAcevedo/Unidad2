@@ -1,0 +1,51 @@
+package Recursividad;
+import java.util.Scanner;
+public class Main 
+{
+    public static void main (String[] args)
+    {
+        Fibonacci Serie=new Fibonacci();
+        Factorial Objeto=new Factorial();
+        Numeros Obj=new Numeros();
+        
+        Scanner Leer = new Scanner (System.in);
+        
+        int x=1, Opc=0;
+        
+        while(x==1)
+        {
+            System.out.println("");
+            System.out.println("--------------------- Menu ---------------------");
+            System.out.println("Por favor elige una de las siguientes opciones");
+            System.out.println("1.- Serie Fibonacci");
+            System.out.println("2.- Presentar números del 1 al 10 ");
+            System.out.println("3.- Factorial de un numero ");
+            System.out.println("4.- Salir");
+            Opc=Leer.nextInt();
+            
+            if(Opc>0 && Opc<7)
+            {
+                switch(Opc)
+                {
+                    case 1: Serie.Mostrar();
+                        break;
+                    case 2: Obj.Recursividad(1);
+                        break;
+                    case 3: Objeto.Mostar();
+                        break;
+                    case 4: System.exit(0);
+                        break;
+                }
+                System.out.println("");
+                System.out.println("Si deceas repertir el proceso teclea 1");
+                System.out.println("Si deceas salir teclea 2");
+                x=Leer.nextInt();
+            }
+            else
+            {
+                System.out.println("Lo sentimos el numero ingresado es incorrecto");
+                System.out.println("Por favor elija una opcion valida");
+            }
+        }
+    }
+}
